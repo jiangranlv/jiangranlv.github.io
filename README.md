@@ -1,8 +1,8 @@
 ## Jiangran Lv (吕江燃)
 
-You can use the [editor on GitHub](https://github.com/jiangranlv/jiangranlv.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+I am an incoming Ph.D. student at Center on Frontiers of Computing Studies (CFCS), Peking University, where I am honored to be advised by Prof. Yizhou Wang and Prof. He Wang. 
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+My research interests lie in 3D computer vision, especially 3D pose estimation and the semi-/self- supervised learning schemes for the applications. 
 
 ### Markdown
 
