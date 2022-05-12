@@ -2,7 +2,7 @@
 
 I am an incoming Ph.D. student at Center on Frontiers of Computing Studies (CFCS), Peking University, where I am honored to be advised by Prof. Yizhou Wang and Prof. He Wang. 
 
-My research interests lie in 3D computer vision, especially 3D pose estimation and the semi-/self- supervised learning schemes for the applications. 
+My research interests lie in 3D computer vision and embodied AI. 
 
 ### Markdown
 
