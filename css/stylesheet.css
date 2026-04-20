@@ -131,3 +131,31 @@ papertitle {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* D: pill-style paper links */
+.paper-links a {
+  display: inline-block;
+  padding: 2px 9px;
+  margin: 3px 2px 0 0;
+  border: 1px solid #1772d0;
+  border-radius: 12px;
+  color: #1772d0;
+  font-size: 13px;
+  line-height: 1.6;
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
+}
+.paper-links a:hover {
+  background-color: #1772d0;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* E: portrait hover zoom */
+.hoverZoomLink img {
+  transition: transform 0.2s ease;
+  display: block;
+}
+.hoverZoomLink:hover img {
+  transform: scale(1.04);
+}
