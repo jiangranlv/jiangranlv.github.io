@@ -10,6 +10,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+  <style>
+    @keyframes badgePulse {
+      0%, 100% { transform: scale(1);    box-shadow: 0 2px 6px rgba(221,36,118,0.45); }
+      50%      { transform: scale(1.05); box-shadow: 0 3px 12px rgba(221,36,118,0.75); }
+    }
+  </style>
 </head>
 
 <body>
@@ -70,7 +76,8 @@
           </tbody>
         </table>
         <ul>
-          <li><b style="color: green; background-color: #ffff42">NEW</b> [2025/7] Invited Talk at <a href="https://www.sharpa.com/">Sharpa</a> and Prof. <a href="https://alvinwen428.github.io/">Chuan Wen's Lab</a> at SJTU.</li>
+          <li><b style="color: green; background-color: #ffff42">NEW</b> [2026/7] Our paper <a href="https://pku-epic.github.io/DAPL/">DAPL</a> is selected as a <b>🏆 Best Paper Finalist</b> at <b>RSS 2026</b>!</li>
+          <li>[2025/7] Invited Talk at <a href="https://www.sharpa.com/">Sharpa</a> and Prof. <a href="https://alvinwen428.github.io/">Chuan Wen's Lab</a> at SJTU.</li>
           <li>[2024/12] Invited Talk at <a href="https://www.techbeat.net/talk-info?id=931">TechBeat</a>.</li>
         </ul>
       </div>
@@ -109,6 +116,36 @@
             <a href="https://research.nvidia.com/labs/cosmos-lab/cosmos3/" target="_blank">project page</a> /
             <a href="https://github.com/nvidia/cosmos" target="_blank">code</a> /
             <a href="https://huggingface.co/collections/nvidia/cosmos3" target="_blank">models</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td style="padding: 20px; padding-bottom: 30px; width: 28%; vertical-align: middle">
+            <img style="width: 100%; max-width: 100%" src="images/dapl.gif" alt="">
+          </td>
+          <td style="padding: 20px; padding-bottom: 30px; width: 72%; vertical-align: middle">
+            <papertitle>Emerging Extrinsic Dexterity in Cluttered Scenes via Dynamics-aware Policy Learning</papertitle>
+            <br>
+            <a href="#">Yixin Zheng</a><sup>*</sup>,
+            <b>Jiangran Lyu</b><sup>*,&dagger;</sup>,
+            <a href="#">Yifan Zhang</a>,
+            <a href="https://jychen18.github.io/">Jiayi Chen</a>,
+            <a href="https://miyandoris.github.io/">Mi Yan</a>,
+            <a href="https://yuntiandeng.github.io/">Yuntian Deng</a>,
+            <a href="https://scholar.google.com/citations?user=wRBbtl8AAAAJ&hl=en">Xuesong Shi</a>,
+            <a href="">Xiaoguang Zhao</a>,
+            <a href="https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm">Yizhou Wang</a>,
+            <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang</a><sup>&#9993;</sup>,
+            <a href="https://hughw19.github.io/">He Wang</a><sup>&#9993;</sup>
+            <br>
+            <em>Robotics: Science and Systems <span style="font-style: normal;"><b>(RSS)</b></span></em>, 2026 &nbsp;
+            <span style="display: inline-block; font-style: normal; font-weight: 700; font-size: 0.95em; letter-spacing: 0.3px; color: #ffffff; background: linear-gradient(135deg, #ff512f, #dd2476); padding: 3px 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.35); box-shadow: 0 2px 6px rgba(221,36,118,0.45); text-shadow: 0 1px 2px rgba(0,0,0,0.25); vertical-align: middle; white-space: nowrap; animation: badgePulse 1.8s ease-in-out infinite;">🏆 Best Paper Finalist</span>
+            <br>
+            <a href="https://arxiv.org/abs/2603.09882">arXiv</a> / <a href="https://pku-epic.github.io/DAPL/">project page</a> / <a href="">code</a>
+            <p style="margin-bottom: 10px; margin-top: 10px">
+              By leveraging dynamics-aware policy learning, our approach enables robots to exploit
+              environmental contacts and object interactions to accomplish complex manipulation.
+            </p>
           </td>
         </tr>
 
@@ -152,35 +189,6 @@
             <!-- <p style="margin-bottom: 10px; margin-top: 10px">
               We present LDA-1B, a scalable latent dynamics action model trained on universal embodied data, enabling generalizable action prediction and execution across diverse robotic tasks.
             </p> -->
-          </td>
-        </tr>
-
-        <tr>
-          <td style="padding: 20px; padding-bottom: 30px; width: 28%; vertical-align: middle">
-            <img style="width: 100%; max-width: 100%" src="images/dapl.gif" alt="">
-          </td>
-          <td style="padding: 20px; padding-bottom: 30px; width: 72%; vertical-align: middle">
-            <papertitle>Emerging Extrinsic Dexterity in Cluttered Scenes via Dynamics-aware Policy Learning</papertitle>
-            <br>
-            <a href="#">Yixin Zheng</a><sup>*</sup>,
-            <b>Jiangran Lyu</b><sup>*,&dagger;</sup>,
-            <a href="#">Yifan Zhang</a>,
-            <a href="https://jychen18.github.io/">Jiayi Chen</a>,
-            <a href="https://miyandoris.github.io/">Mi Yan</a>,
-            <a href="https://yuntiandeng.github.io/">Yuntian Deng</a>,
-            <a href="https://scholar.google.com/citations?user=wRBbtl8AAAAJ&hl=en">Xuesong Shi</a>,
-            <a href="">Xiaoguang Zhao</a>,
-            <a href="https://cfcs.pku.edu.cn/english/people/faculty/yizhouwang/index.htm">Yizhou Wang</a>,
-            <a href="https://scholar.google.com/citations?user=X7M0I8kAAAAJ&hl=en">Zhizheng Zhang</a><sup>&#9993;</sup>,
-            <a href="https://hughw19.github.io/">He Wang</a><sup>&#9993;</sup>
-            <br>
-            <em>Robotics: Science and Systems <span style="font-style: normal;"><b>(RSS)</b></span></em>, 2026 &nbsp;
-            <br>
-            <a href="https://arxiv.org/abs/2603.09882">arXiv</a> / <a href="https://pku-epic.github.io/DAPL/">project page</a> / <a href="">code</a>
-            <p style="margin-bottom: 10px; margin-top: 10px">
-              By leveraging dynamics-aware policy learning, our approach enables robots to exploit 
-              environmental contacts and object interactions to accomplish complex manipulation.
-            </p>
           </td>
         </tr>
 
