@@ -94,7 +94,7 @@
         </tr>
         <tr>
           <td style="padding: 4px 0 12px">
-            <div id="publication-filters" role="group" aria-label="Filter publications by topic" style="display:flex;flex-wrap:wrap;gap:20px;border-bottom:1px solid #e7e7e7"></div>
+            <div id="publication-filters" role="group" aria-label="Filter publications by topic" style="display:flex;flex-wrap:nowrap;gap:10px;overflow-x:auto;border-bottom:1px solid #e7e7e7"></div>
           </td>
         </tr>
         </tbody>
@@ -570,12 +570,13 @@
           if (!tbody) return;
           const rows = Array.from(tbody.querySelectorAll(':scope > tr')).filter(row => row.querySelector('papertitle'));
           const sections = [
-            ['Coding Agents', ['AgentGarten:', 'Code as Worlds:', 'HarnessEval-W:', 'S-Space:']],
+            ['RSI Agents', ['AgentGarten:', 'Code as Worlds:', 'HarnessEval-W:', 'S-Space:']],
             ['World Action Models', ['Cosmos 3:', 'What Visual Representations Do World Action Models Need?', 'DualWAM:', 'WAM-TTT:', 'LDA-1B:', 'DyWA:']],
-            ['Dexterous and Humanoid', ['Emerging Extrinsic Dexterity', 'BiDexGrasp:', 'KPGrasp:', 'RoboHanger:', 'HumanoidNDM:', 'Track Any Motions under Any Disturbances']],
+            ['Dexterity and Humanoid', ['Emerging Extrinsic Dexterity', 'BiDexGrasp:', 'KPGrasp:', 'RoboHanger:', 'HumanoidNDM:', 'Track Any Motions under Any Disturbances']],
             ['Simulation', ['GIF:', 'ZETA:', 'RoboVerse:', 'ScissorBot:']],
-            ['Other Publications', ['Towards Robust Probabilistic Modeling on SO(3)', 'Discovering Visual Co-occurrence']]
+            ['Others', ['Towards Robust Probabilistic Modeling on SO(3)', 'Discovering Visual Co-occurrence']]
           ];
+          const sectionColors = sections.map(() => ({ base: '#526579', tint: '#f2f5f7', active: '#354b60' }));
           const filterBar = document.querySelector('#publication-filters');
           const titleOf = row => row.querySelector('papertitle').textContent.trim();
           const chronological = [
@@ -601,9 +602,10 @@
             if (!rows.some(row => rowSections.get(row) === sectionIndex)) return;
             const button = document.createElement('button');
             button.type = 'button';
-            button.textContent = label;
+            button.innerHTML = `<span aria-hidden="true" style="font-size:12px;margin-right:7px">●</span>${label}`;
             button.setAttribute('aria-pressed', 'false');
-            button.style.cssText = 'padding:10px 0 9px;border:0;border-bottom:2px solid transparent;margin-bottom:-1px;background:transparent;color:#777;font:inherit;font-size:15px;cursor:pointer;transition:color .15s,border-color .15s';
+            const colors = sectionColors[sectionIndex];
+            button.style.cssText = `display:flex;flex:1 0 0;align-items:center;justify-content:center;padding:8px 12px;border:1px solid ${colors.base}55;border-radius:7px;margin-bottom:8px;background:${colors.tint};color:${colors.base};font:inherit;font-size:15px;font-weight:600;white-space:nowrap;cursor:pointer;transition:color .15s,background .15s,border-color .15s,box-shadow .15s`;
             button.addEventListener('click', () => {
               activeSection = activeSection === sectionIndex ? null : sectionIndex;
               rows.forEach(row => { row.hidden = activeSection !== null; });
@@ -618,8 +620,11 @@
               buttons.forEach(({ element, index }) => {
                 const selected = activeSection === index;
                 element.setAttribute('aria-pressed', String(selected));
-                element.style.color = selected ? '#222' : '#777';
-                element.style.borderBottomColor = selected ? '#555' : 'transparent';
+                const colors = sectionColors[index];
+                element.style.color = selected ? '#fff' : colors.base;
+                element.style.background = selected ? colors.active : colors.tint;
+                element.style.borderColor = selected ? colors.active : `${colors.base}35`;
+                element.style.boxShadow = selected ? `0 2px 6px ${colors.active}22` : 'none';
               });
             });
             filterBar.appendChild(button);
